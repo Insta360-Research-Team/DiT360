@@ -1,0 +1,72 @@
+# DiT360: High-Fidelity Panoramic Image Generation via Hybrid Training
+
+<p align="center"><a href="https://arxiv.org/abs/2412.01506"><img src='https://img.shields.io/badge/arXiv-Paper-red?logo=arxiv&logoColor=white' alt='arXiv'></a>
+<a href='https://fenghora.github.io/DiT360-Page/'><img src='https://img.shields.io/badge/Project_Page-Website-green?logo=insta360&logoColor=white' alt='Project Page'></a>
+<a href='https://huggingface.co/spaces/Insta360-Research/DiT360'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Live_Demo-blue'></a>
+</p>
+
+![teaser](assets/teaser.jpg)
+
+**DiT360** is a framework for high-quality panoramic image generation, leveraging both **perspective** and **panoramic** data in a hybrid training scheme.
+It adopts a two-level strategy—**image-level cross-domain guidance** and **token-level hybrid supervision**—to enhance perceptual realism and geometric fidelity.
+
+## 🌟 Features
+
+<!-- <p align="center">
+  <img src="assets/result.gif" width="90%">
+</p> -->
+![result](assets/result.gif)
+
+- **High Perceptual Realism**: It produces panoramic images with high resolution and clear details for lifelike visual quality.
+- **Precise Geometric Fidelity**: It correctly models multi-scale distortions in panoramic images with smooth, continuous edges.
+- **Versatile Applications**: It enables robust handling of generated assets across multiple tasks, seamlessly supporting both inpainting and outpainting.
+
+
+## ⏩ Updates
+
+**10/10/2025**
+
+- Release inference code.
+
+## 🔨 Installation
+
+Clone the repo first:
+
+```Bash
+git clone https://github.com/Insta360-Research-Team/DiT360.git
+cd DiT360
+```
+
+(Optional) Create a fresh conda env:
+
+```Bash
+conda create -n dit360 python=3.12
+conda activate dit360
+```
+
+Install necessary packages (torch > 2):
+
+```Bash
+# pytorch (select correct CUDA version, we test our code on torch==2.6.0 and torchvision==0.21.0)
+pip install torch==2.6.0 torchvision==0.21.0
+
+# other dependencies
+pip install -r requirements.txt
+```
+
+## 📒 Inference
+
+```Bash
+python inference.py
+```
+
+## 🤝 Acknowledgement
+
+We appreciate the open source of the following projects:
+
+* [diffusers](https://github.com/huggingface/diffusers)
+
+## Citation
+```
+
+```

@@ -1,0 +1,6 @@
+git+https://ghfast.top/https://github.com/huggingface/diffusers # to avoid https://github.com/huggingface/diffusers/issues/12436
+transformers
+accelerate
+peft
+protobuf
+sentencepiece
