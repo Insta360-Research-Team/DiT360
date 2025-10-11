@@ -2,8 +2,9 @@
 
 <p align="center">
 <!-- <a><img src='https://img.shields.io/badge/arXiv-Paper-red?logo=arxiv&logoColor=white' alt='arXiv'></a> -->
-<a href='https://fenghora.github.io/DiT360-Page/'><img src='https://img.shields.io/badge/Project_Page-Website-green?logo=insta360&logoColor=white' alt='Project Page'></a>
-<a href='https://huggingface.co/spaces/Insta360-Research/DiT360'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Live_Demo-blue'></a>
+  <a href='https://fenghora.github.io/DiT360-Page/'><img src='https://img.shields.io/badge/Project_Page-Website-green?logo=insta360&logoColor=white' alt='Project Page'></a>
+  <a href='https://huggingface.co/spaces/Insta360-Research/DiT360'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Live_Demo-blue'></a>
+  <a href='https://huggingface.co/datasets/Insta360-Research/Matterport3D_polished'><img src='https://img.shields.io/badge/%F0%9F%93%88%20Hugging%20Face-Dataset-yellow'></a>
 </p>
 
 ![teaser](assets/teaser.jpg)
