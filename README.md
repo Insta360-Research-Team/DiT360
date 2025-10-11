@@ -95,3 +95,12 @@ We appreciate the open source of the following projects:
 ```
 
 ```
+If you find our dataset useful, please also include a citation for Matterport3D:
+```
+@article{Matterport3D,
+  title={Matterport3D: Learning from RGB-D Data in Indoor Environments},
+  author={Chang, Angel and Dai, Angela and Funkhouser, Thomas and Halber, Maciej and Niessner, Matthias and Savva, Manolis and Song, Shuran and Zeng, Andy and Zhang, Yinda},
+  journal={International Conference on 3D Vision (3DV)},
+  year={2017}
+}
+```
