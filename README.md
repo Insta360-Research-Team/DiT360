@@ -62,6 +62,22 @@ pip install torch==2.6.0 torchvision==0.21.0
 pip install -r requirements.txt
 ```
 
+## 🖼️ Dataset
+
+We have uploaded the dataset to **Hugging Face**. For more details, please visit [Insta360-Research/Matterport3D_polished](https://huggingface.co/datasets/Insta360-Research/Matterport3D_polished).
+
+For a quick start, you can try:
+
+```python
+from datasets import load_dataset
+
+ds = load_dataset("Insta360-Research/Matterport3D_polished")
+
+# check the data
+print(ds["train"][0])
+```
+If you encounter any issues, please refer to the official Hugging Face documentation.
+
 ## 📒 Inference
 
 ```Bash
