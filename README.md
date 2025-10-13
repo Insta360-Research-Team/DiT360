@@ -27,12 +27,12 @@ It adopts a two-level strategy—**image-level cross-domain guidance** and **tok
 ## ⏩ Updates
 **15/10/2025**
 - Release the training code.
-  
-**14/10/2025**
-- Release the refined Matterport3D dataset.
 
-**13/10/2025**
+**14/10/2025**
 - Release our paper on arXiv.
+
+**11/10/2025**
+- Release the refined Matterport3D dataset.
   
 **10/10/2025**
 - Release the pretrained model and inference code.
