@@ -79,9 +79,54 @@ print(ds["train"][0])
 ```
 If you encounter any issues, please refer to the official Hugging Face documentation.
 
+
 ## 📒 Inference
 
 ```Bash
+python inference.py
+```
+
+## 🚀 Train
+
+
+We provide a training pipeline based on **Insta360-Research/Matterport3D_polished**, along with corresponding launch scripts.
+You can start training with a single command:
+
+
+```bash
+bash train.sh
+```
+
+
+After training is completed, you will find a checkpoint file saved under the output directory, typically like:
+
+
+```bash
+model_saved/lightning_logs/version_x/checkpoints/vsclip_epoch=xxx.ckpt/checkpoint/mp_rank_00_model_states.pt
+```
+
+
+You can extract the LoRA weights from the full `.pt` checkpoint by running:
+
+
+```bash
+python get_lora_weights.py <path_to_your_pt_file> <output_dir>
+```
+
+
+If you don’t specify `output_dir`, the extracted weights will be saved by default to:
+
+
+```bash
+lora_output/
+```
+
+
+After that, you can directly use your trained LoRA in the inference script.
+Simply replace the default model path `"fenghora/DiT360-Panorama-Image-Generation"` in `inference.py` with your output directory (e.g., `"lora_output"`), and then run:
+
+
+```bash
 python inference.py
 ```
 
