@@ -93,7 +93,7 @@ We appreciate the open source of the following projects:
 
 ## Citation
 ```
-@misc{feng2025dit360highfidelitypanoramicimage,
+@misc{dit360,
       title={DiT360: High-Fidelity Panoramic Image Generation via Hybrid Training}, 
       author={Haoran Feng and Dizhe Zhang and Xiangtai Li and Bo Du and Lu Qi},
       year={2025},
