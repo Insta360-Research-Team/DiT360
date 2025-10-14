@@ -94,11 +94,11 @@ We appreciate the open source of the following projects:
 ## Citation
 ```
 @misc{dit360,
-      title={DiT360: High-Fidelity Panoramic Image Generation via Hybrid Training}, 
-      author={Haoran Feng and Dizhe Zhang and Xiangtai Li and Bo Du and Lu Qi},
-      year={2025},
-      eprint={2510.11712},
-      archivePrefix={arXiv},
+  title={DiT360: High-Fidelity Panoramic Image Generation via Hybrid Training}, 
+  author={Haoran Feng and Dizhe Zhang and Xiangtai Li and Bo Du and Lu Qi},
+  year={2025},
+  eprint={2510.11712},
+  archivePrefix={arXiv},
 }
 ```
 If you find our dataset useful, please also include a citation for Matterport3D:
