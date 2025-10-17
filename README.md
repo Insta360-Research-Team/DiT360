@@ -25,6 +25,10 @@ It adopts a two-level strategy—**image-level cross-domain guidance** and **tok
 
 
 ## ⏩ Updates
+
+**17/10/2025**
+- Release the inpainting and outpainting code.
+
 **15/10/2025**
 - Release the training code.
 
@@ -88,7 +92,6 @@ python inference.py
 
 ## 🚀 Train
 
-
 We provide a training pipeline based on **Insta360-Research/Matterport3D_polished**, along with corresponding launch scripts.
 You can start training with a single command:
 
@@ -130,11 +133,33 @@ Simply replace the default model path `"fenghora/DiT360-Panorama-Image-Generatio
 python inference.py
 ```
 
+## 🎨 Inpainting and Outpainting
+
+
+We treat both **inpainting** and **outpainting** as image completion tasks, where the key lies in how the **mask** is defined. A simple example is already provided in our codebase.
+
+For a quick start, you can simply run:
+```bash
+python editing.py
+```
+
+In our implementation, regions with a mask value of 1 correspond to the parts preserved from the source image. 
+Therefore, in our example, you can invert the mask as follows for inpainting:
+```python
+mask = 1 - mask  # for inpainting
+```
+
+This part is built upon [Personalize Anything](https://github.com/fenghora/personalize-anything).
+
+
 ## 🤝 Acknowledgement
 
 We appreciate the open source of the following projects:
 
 * [diffusers](https://github.com/huggingface/diffusers)
+* [Personalize Anything](https://github.com/fenghora/personalize-anything)
+* [RF-Inversion](https://github.com/LituRout/RF-Inversion)
+* [RF-Solver-Edit](https://github.com/wangjiangshan0725/RF-Solver-Edit)
 
 ## Citation
 ```
@@ -146,12 +171,21 @@ We appreciate the open source of the following projects:
   archivePrefix={arXiv},
 }
 ```
-If you find our dataset useful, please also include a citation for Matterport3D:
+If you find our **dataset** useful, please include a citation for **Matterport3D**:
 ```
 @article{Matterport3D,
   title={Matterport3D: Learning from RGB-D Data in Indoor Environments},
   author={Chang, Angel and Dai, Angela and Funkhouser, Thomas and Halber, Maciej and Niessner, Matthias and Savva, Manolis and Song, Shuran and Zeng, Andy and Zhang, Yinda},
   journal={International Conference on 3D Vision (3DV)},
   year={2017}
+}
+```
+If you find our **inpainting & outpainting** useful, please include a citation for **Personalize Anything**:
+```
+@article{feng2025personalize,
+  title={Personalize Anything for Free with Diffusion Transformer},
+  author={Feng, Haoran and Huang, Zehuan and Li, Lin and Lv, Hairong and Sheng, Lu},
+  journal={arXiv preprint arXiv:2503.12590},
+  year={2025}
 }
 ```
