@@ -133,7 +133,7 @@ Simply replace the default model path `"fenghora/DiT360-Panorama-Image-Generatio
 python inference.py
 ```
 
-## 🎨 Inpainting and Outpainting
+## 🎨 Inpainting & Outpainting
 
 
 We treat both **inpainting** and **outpainting** as image completion tasks, where the key lies in how the **mask** is defined. A simple example is already provided in our codebase.
