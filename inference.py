@@ -2,7 +2,7 @@ from src.pipeline import DiT360Pipeline
 import torch
 
 device = torch.device("cuda:0")
-pipe = DiT360Pipeline.from_pretrained("black-forest-labs/FLUX.1-dev", dtype=torch.float16).to(device)
+pipe = DiT360Pipeline.from_pretrained("black-forest-labs/FLUX.1-dev", torch_dtype=torch.float16).to(device)
 pipe.load_lora_weights("fenghora/DiT360-Panorama-Image-Generation")
 
 image = pipe(
