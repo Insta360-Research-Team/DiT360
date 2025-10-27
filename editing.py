@@ -1,3 +1,4 @@
+import psutil
 import os
 import gc
 import glob
@@ -24,7 +25,7 @@ dtype = torch.float16
 tau = 50    # range from 0~100, the smaller the tau value, the stronger the image consistency but may reduce image quality
 
 pipe = RFPanoInversionParallelFluxPipeline.from_pretrained("black-forest-labs/FLUX.1-dev", torch_dtype=dtype, low_cpu_mem_usage=True).to(device)
-pipe.load_lora_weights("fenghora/DiT360-Panorama-Image-Generation")
+pipe.load_lora_weights("Insta360-Research/DiT360-Panorama-Image-Generation")
 
 height = 1024
 width = 2048

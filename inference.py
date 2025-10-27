@@ -3,7 +3,7 @@ import torch
 
 device = torch.device("cuda:0")
 pipe = DiT360Pipeline.from_pretrained("black-forest-labs/FLUX.1-dev", torch_dtype=torch.float16).to(device)
-pipe.load_lora_weights("fenghora/DiT360-Panorama-Image-Generation")
+pipe.load_lora_weights("Insta360-Research/DiT360-Panorama-Image-Generation")
 
 image = pipe(
     "This is a panorama. The image shows a medieval castle stands proudly on a hilltop surrounded by autumn forests, with golden light spilling across the landscape.",
