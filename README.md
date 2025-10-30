@@ -26,6 +26,9 @@ It adopts a two-level strategy—**image-level cross-domain guidance** and **tok
 
 ## ⏩ Updates
 
+**30/10/2025**
+- Release mix-training code.
+
 **17/10/2025**
 - Release the inpainting and outpainting code.
 
@@ -92,6 +95,8 @@ python inference.py
 
 ## 🚀 Train
 
+### Panorama Training
+
 We provide a training pipeline based on **Insta360-Research/Matterport3D_polished**, along with corresponding launch scripts.
 You can start training with a single command:
 
@@ -132,6 +137,47 @@ Simply replace the default model path `"fenghora/DiT360-Panorama-Image-Generatio
 ```bash
 python inference.py
 ```
+
+### Mix Training
+
+
+Mix training aims to leverage both **panoramic images** and **perspective images** to improve the model’s generalization across different viewpoints.  
+
+#### Data Preparation
+
+You need to prepare **two `.jsonl` files**:  
+- One for **panoramic images**  
+- One for **perspective images**
+
+Each line in a `.jsonl` file should represent a single training sample with the following format:
+
+```json
+{"image": "path/to/image.jpg", "caption": "a description of the scene", "mask": "path/to/mask.png"}
+```
+
+#### Mask Description
+
+The `mask` is a PNG (or similar) image used to specify which regions should be supervised during training:
+
+- **White regions (`255, 255, 255`)** indicate areas that are supervised.  
+- **Black regions (`0, 0, 0`)** indicate areas that are ignored.
+
+Specifically:
+
+- For **panoramic images**, the `mask` is typically an all-white image (meaning the entire image is supervised).  
+- For **perspective images**, the `mask` corresponds to the valid projected area derived from the panoramic-to-perspective mapping.
+
+#### Projection Mapping
+
+The perspective images and their corresponding masks can be generated from panoramic images using an equirectangular-to-perspective projection.  
+We highly recommend using the excellent open-source library below for this purpose:  
+
+> [py360convert](https://github.com/sunset1995/py360convert)
+
+This library provides high-quality conversions between panoramic and perspective views, making it easy to generate consistent training data for mixed-view learning.
+
+To start training, please refer to the provided scripts:  
+`train_mix_staged_lora_dynamic.sh` and `train_mix_staged_lora_dynamic.py`.
 
 ## 🎨 Inpainting & Outpainting
 

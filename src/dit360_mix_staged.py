@@ -15,7 +15,6 @@ from diffusers.training_utils import (
 from transformers import get_cosine_schedule_with_warmup
 from diffusers import AutoencoderKL, FlowMatchEulerDiscreteScheduler, FluxPipeline, FluxTransformer2DModel
 
-from src.data import get_crop_size
 from src.pipeline import DiT360Pipeline
 from src.yaw_rotate import equirectangular_rotate_yaw
 from src.cube_map import cube_map_from_equirectangular
