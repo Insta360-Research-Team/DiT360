@@ -95,8 +95,8 @@ For a quick use, you can just try:
 python inference.py
 ```
 
-⚠️ Note: We only trained the model on datasets with a resolution of 1024 × 2048, so using other input sizes may lead to abnormal results.
-In addition, without any optimization, the inference process requires approximately 37 GB of GPU memory, so please be aware of the memory usage.
+⚠️ Note: We only trained the model on datasets with a resolution of **1024 × 2048**, so using other input sizes may lead to abnormal results.
+In addition, without any optimization, the inference process requires approximately **37 GB** of GPU memory, so please be aware of the memory usage.
 
 ## 🚀 Train
 
