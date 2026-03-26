@@ -233,10 +233,13 @@ If you find our **dataset** useful, please include a citation for **Matterport3D
 ```
 If you find our **inpainting & outpainting** useful, please include a citation for **Personalize Anything**:
 ```
-@article{feng2025personalize,
-  title={Personalize Anything for Free with Diffusion Transformer},
-  author={Feng, Haoran and Huang, Zehuan and Li, Lin and Lv, Hairong and Sheng, Lu},
-  journal={arXiv preprint arXiv:2503.12590},
-  year={2025}
+@inproceedings{feng2026personalize,
+  title={Personalize anything for free with diffusion transformer},
+  author={Feng, Haoran and Huang, Zehuan and Li, Lin and Sheng, Lu},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={40},
+  number={5},
+  pages={3921--3929},
+  year={2026}
 }
 ```
