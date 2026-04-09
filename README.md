@@ -1,4 +1,4 @@
-# DiT360: High-Fidelity Panoramic Image Generation via Hybrid Training
+# [CVPR 2026] DiT360: High-Fidelity Panoramic Image Generation via Hybrid Training
 
 <p align="center">
   <a href='https://arxiv.org/abs/2510.11712'><img src='https://img.shields.io/badge/arXiv-Paper-red?logo=arxiv&logoColor=white' alt='arXiv'></a>
